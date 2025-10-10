@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ClientController {
 
     @Autowired
-    private ClientRepo clientRepo;
+    private ClientService clientService;
 
     @GetMapping
     public String listClients(Model model) {
-        model.addAttribute("clients", clientRepo.findAll());
+        model.addAttribute("clients", clientService.getAllClients());
         return "clients";
     }
 
@@ -33,7 +33,7 @@ public class ClientController {
 
     @PostMapping("/add")
     public String addClient(@ModelAttribute Client client) {
-        clientRepo.save(client);
+        clientService.saveClient(client);
         return "redirect:/clients";
     }
 }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoService Manager</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Добре дошли в AutoService Manager 🚗</h1>
+<p>Управлявайте клиенти, коли и ремонти лесно и бързо.</p>
+
+<nav>
+    <ul>
+        <li><a th:href="@{/clients}">Клиенти</a></li>
+        <li><a th:href="@{/cars}">Коли</a></li>
+        <li><a th:href="@{/repairs}">Ремонти</a></li>
+    </ul>
+</nav>
+</body>
+</html>
