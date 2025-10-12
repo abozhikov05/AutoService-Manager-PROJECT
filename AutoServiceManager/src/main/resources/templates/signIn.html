@@ -10,17 +10,18 @@
     <div class="nav-container">
         <h1>AutoService Manager</h1>
         <ul>
-            <li><a href="/signup">Sign Up</a></li>
-            <li><a href="/signIn">Sign In</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/clients">Клиенти</a></li>
             <li><a href="/cars">Автомобили</a></li>
             <li><a href="/services">Услуги</a></li>
         </ul>
     </div>
 </nav>
-<section class="hero">
-<img th:src= "@{/images/indexImg.png}" alt="Image not found">
-</section>
-    <h1>Добре дошли в AutoService Manager 🚗</h1>
-<p>Тук нашите специалисти ще се погрижат за вашия автомобил по специален начин.</p>
+<form action="#" th:action="@{/signIn}" method="post">
+    <input type="email" name="email" placeholder="Email" required/>
+    <input type="password" name="password" placeholder="Password" required/>
+    <button type="submit">Sign In</button>
+    <p th:text="${error}"></p>
+</form>
 </body>
 </html>

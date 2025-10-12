@@ -5,17 +5,20 @@
 </head>
 <body>
 <h1>Add New Client</h1>
-<form th:action="@{/clients/add}" th:object="${client}" method="post">
-    <label for="firstName">First Name:</label>
-    <input type="text" th:field="*{firstName}" id="firstName" />
-    <label for="lastName">Last Name:</label>
-    <input type="text" th:field="*{lastName}" id="lastName" />
-    <label for="firstName">Phone Number:</label>
-    <input type="text" th:field="*{phone}" id="phone" />
-    <label for="email">Email:</label>
-    <input type="text" th:field="*{email}" id="email" />
+<form th:action="@{/clients/add}" method="post" th:object="${client}">
+    <label>First Name:</label>
+    <input type="text" th:field="*{getFirstName()}" required><br>
+    <label>Last Name:</label>
+    <input type="text" th:field="*{getLastName()}" required><br>
+    <label>Email:</label>
+    <input type="email" th:field="*{getEmail()}" required><br>
+    <label>Phone Number:</label>
+    <input type="number" th:field="*{getPhone()}" required><br>
 
-    <button type="submit">Save</button>
+    <label>Password:</label>
+    <input type="password" th:field="*{password}" required><br>
+
+    <button type="submit">Submit</button>
 </form>
 </body>
 </html>

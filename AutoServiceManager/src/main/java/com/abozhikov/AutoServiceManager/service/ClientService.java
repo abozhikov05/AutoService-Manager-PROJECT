@@ -3,6 +3,7 @@ package com.abozhikov.AutoServiceManager.service;
 import com.abozhikov.AutoServiceManager.model.Client;
 import com.abozhikov.AutoServiceManager.repo.ClientRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,20 +13,15 @@ import java.util.Optional;
 public class ClientService {
     @Autowired
     private ClientRepo clientRepo;
-
-    public List<Client> getAllClients() {
-        return clientRepo.findAll();
+    public ClientService(ClientRepo clientRepository) {
+        this.clientRepo = clientRepository;
     }
 
-    public Optional<Client> getClientById(int id) {
-        return clientRepo.findById(id);
+    public Client findByEmail(String email) {
+        return clientRepo.findByEmail(email);
     }
-
-    public void deleteClient(int id) {
-        clientRepo.deleteById(id);
+    public Client saveClient(Client client) {
+        return clientRepo.save(client);
     }
-    public void saveClient(Client client) {
-        clientRepo.save(client);
-    }
-
 }
+

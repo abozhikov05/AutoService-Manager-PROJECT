@@ -7,33 +7,41 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Controller
-@RequestMapping("/clients")
 public class ClientController {
 
     @Autowired
     private ClientService clientService;
-
-    @GetMapping
-    public String listClients(Model model) {
-        model.addAttribute("clients", clientService.getAllClients());
-        return "clients";
+    public ClientController(ClientService clientService) {
+        this.clientService = clientService;
     }
 
-    @GetMapping("/add")
-    public String showAddForm(Model model) {
+    @GetMapping("/signup")
+    public String showForm(Model model) {
         model.addAttribute("client", new Client());
-        return "add-client";
+        return "signup";
     }
 
-    @PostMapping("/add")
-    public String addClient(@ModelAttribute Client client) {
+    @PostMapping("/signup")
+    public String registerClient(@ModelAttribute Client client) {
         clientService.saveClient(client);
-        return "redirect:/clients";
+        return "index";
+    }
+
+    @GetMapping("/signIn")
+    public String signInPage() {
+        return "signIn";
+    }
+    @PostMapping("/signIn")
+    public String login(@RequestParam String email, @RequestParam String password, Model model) {
+        Client client = clientService.findByEmail(email);
+        if(client != null && client.getPassword().equals(password)) {
+            return "index";
+        } else {
+            model.addAttribute("error", "Невалидни данни");
+            return "signIn";
+        }
     }
 }
