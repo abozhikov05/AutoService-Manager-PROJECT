@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Запиши час</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h2>Запиши час за услуга</h2>
+
+<form th:action="@{/services}" th:object="${serviceRequest}" method="post">
+
+    <label>Избери услуга:</label>
+    <select th:field="*{serviceType}" required>
+        <option value="">-- Избери --</option>
+        <option value="Смяна на масло">Смяна на масло</option>
+        <option value="Диагностика">Диагностика</option>
+        <option value="Ремонт на спирачки">Ремонт на спирачки</option>
+        <option value="Проверка на двигателя">Проверка на двигателя</option>
+        <option value="Повреда">Повреда</option>
+    </select><br>
+
+    <label>Описание (ако има повреда):</label>
+    <textarea th:field="*{description}" placeholder="Опиши проблема..."></textarea><br>
+
+    <label>Марка:</label>
+    <input type="text" th:field="*{carMake}" required><br>
+
+    <label>Модел:</label>
+    <input type="text" th:field="*{carModel}" required><br>
+
+    <label>Година:</label>
+    <input type="number" th:field="*{carYear}" required><br>
+
+    <label>Дата:</label>
+    <input type="date" th:field="*{date}" required><br>
+
+    <label>Час:</label>
+    <input type="time" th:field="*{time}" required><br>
+
+    <button type="submit">Запиши час</button>
+</form>
+
+</body>
+</html>
