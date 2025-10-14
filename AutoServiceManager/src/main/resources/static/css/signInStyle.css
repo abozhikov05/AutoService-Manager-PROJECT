@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 270px;
+    height: 100vh;
+    background-color: mediumblue;
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+
+.sidebar h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 0;
+}
+
+.sidebar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background 0.3s, padding-left 0.3s;
+}
+
+.sidebar li a:hover {
+    background-color: dodgerblue;
+    padding-left: 30px;
+}
+
+.signin {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    width: 320px;
+    height: 250px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+.signin h2 {
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-family: Cursive, serif;
+}
+.btn{
+    width: 100%;
+    padding: 10px;
+    background-color: mediumblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.signin-form button:hover {
+    background-color: dodgerblue;
+}
+.inp{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+}
+.main-content {
+    margin-left: 220px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding-left: 90px;
+    display: flex;
+    justify-content: center;
+}
+.sidebar h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}

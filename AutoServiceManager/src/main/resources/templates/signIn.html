@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>AutoService Manager</title>
-    <link rel="stylesheet" th:href="@{/css/indexStyle.css}">
+    <link rel="stylesheet" th:href="@{/css/signInStyle.css}">
 </head>
 <body>
-<nav class="navbar">
-    <div class="nav-container">
-        <h1>AutoService Manager</h1>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/clients">Клиенти</a></li>
-            <li><a href="/cars">Автомобили</a></li>
-            <li><a href="/services">Услуги</a></li>
-        </ul>
-    </div>
-</nav>
-<form action="#" th:action="@{/signIn}" method="post">
-    <input type="email" name="email" placeholder="Email" required/>
-    <input type="password" name="password" placeholder="Password" required/>
-    <button type="submit">Sign In</button>
+<div class="sidebar">
+
+    <h2>
+        <img th:src="@{/images/carIcon.svg}" alt="car icon" class="icon">
+        AutoService Manager</h2>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/clients">Клиенти</a></li>
+        <li><a href="/cars">Автомобили</a></li>
+        <li><a href="/services">Услуги</a></li>
+    </ul>
+</div>
+<div class="main-content">
+    <div class="form-wrapper">
+<form class="signin" action="#" th:action="@{/signIn}" method="post">
+    <h2>Sign in form</h2>
+    <input class="inp" type="email" name="email" placeholder="Email" required/>
+    <input class="inp" type="password" name="password" placeholder="Password" required/>
+    <button class="btn" type="submit">Sign In</button>
     <p th:text="${error}"></p>
 </form>
+</div>
+</div>
 </body>
 </html>
