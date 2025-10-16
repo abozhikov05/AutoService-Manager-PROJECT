@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    color:royalblue;
+    font-size: 50px;
+}
+.returnHp{
+    text-align: center;
+    color: royalblue;
+    font-size: 25px;
+    gap: 30px;
+}

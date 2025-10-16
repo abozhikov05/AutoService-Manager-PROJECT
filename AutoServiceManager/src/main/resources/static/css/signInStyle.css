@@ -159,3 +159,10 @@ body {
     flex-shrink: 0;
     display: inline-block;
 }
+
+.signuplink{
+    font-family: Cursive, sans-serif;
+    font-style: inherit;
+    text-align: center;
+    color: royalblue;
+}
