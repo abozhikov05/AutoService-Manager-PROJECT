@@ -1,0 +1,275 @@
+﻿.sprite-file, .sprite-ods, .sprite-odp, .sprite-ppt, .sprite-pptx {
+    background: url('../images/sprite-resource-icons.png') no-repeat -43px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-file-small, .sprite-ods-small, .sprite-odp-small, .sprite-ppt-small, .sprite-pptx-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -21px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-html {
+    background: url('../images/sprite-resource-icons.png') no-repeat -243px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-html-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -121px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-json {
+    background: url('../images/sprite-resource-icons.png') no-repeat -443px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-json-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -221px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-xml {
+    background: url('../images/sprite-resource-icons.png') no-repeat -643px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-xml-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -321px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-txt {
+    background: url('../images/sprite-resource-icons.png') no-repeat -843px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-txt-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -421px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-doc, .sprite-docx {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1043px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-doc-small, .sprite-docx-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -521px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-odt {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1243px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-odt-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -621px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-csv {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1443px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-csv-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -721px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-xls, .sprite-xlsx {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1643px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-xls-small, .sprite-xlsx-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -821px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-zip {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1843px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-zip-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -921px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-api {
+    background: url('../images/sprite-resource-icons.png') no-repeat -2043px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-api-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1021px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-pdf {
+    background: url('../images/sprite-resource-icons.png') no-repeat -2243px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-pdf-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1121px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-rdf {
+    background: url('../images/sprite-resource-icons.png') no-repeat -2443px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-rdf-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1221px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-wms {
+    background: url('../images/sprite-resource-icons.png') no-repeat -2643px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-wms-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1321px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-png {
+    background: url('../images/sprite-resource-icons.png') no-repeat -2843px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-png-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1421px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-jpg, .sprite-jpeg, .sprite-jpeg2000 {
+    background: url('../images/sprite-resource-icons.png') no-repeat -3043px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-jpg-small, .sprite-jpeg-small, .sprite-jpeg2000-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1521px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-gif {
+    background: url('../images/sprite-resource-icons.png') no-repeat -3243px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-gif-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1621px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-data {
+    background: url('../images/sprite-resource-icons.png') no-repeat -3443px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-data-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1721px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-wfs {
+    background: url('../images/sprite-resource-icons.png') no-repeat -3643px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-wfs-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1821px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-gml {
+    background: url('../images/sprite-resource-icons.png') no-repeat -3843px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-gml-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -1921px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-wmts {
+    background: url('../images/sprite-resource-icons.png') no-repeat -4043px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-wmts-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -2021px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-kml {
+    background: url('../images/sprite-resource-icons.png') no-repeat -4243px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-kml-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -2121px -218px;
+    width: 58px;
+    height: 63px;
+}
+
+.sprite-geo {
+    background: url('../images/sprite-resource-icons.png') no-repeat -4443px -39px;
+    width: 114px;
+    height: 122px;
+}
+
+.sprite-geo-small {
+    background: url('../images/sprite-resource-icons.png') no-repeat -2221px -218px;
+    width: 58px;
+    height: 63px;
+}

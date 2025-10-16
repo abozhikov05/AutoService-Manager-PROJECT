@@ -32,13 +32,14 @@ public class ServiceRequestController {
     @PostMapping("/services")
     public String submitServiceRequest(@ModelAttribute ServiceRequest serviceRequest) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String email = auth.getName(); // взимаме имейла от логина
+        String email = auth.getName();
 
         Optional<Client> optionalClient = clientRepo.findByEmail(email);
 
-        if (optionalClient.isPresent()) { // проверяваме дали има клиент с този имейл
+        if (optionalClient.isPresent()) {
             Client client = optionalClient.get();
-            serviceRequest.setClientName(client.getFirstName()); // или getLastName() ако искаш фамилията
+            String fullName=client.getFirstName()+" "+client.getLastName();
+            serviceRequest.setClientName(fullName);
         }
 
         serviceRequestRepo.save(serviceRequest);
