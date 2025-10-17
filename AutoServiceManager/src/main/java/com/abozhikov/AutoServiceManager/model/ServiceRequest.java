@@ -21,6 +21,15 @@ private Long id;
     private int carYear;
     private LocalDate date;
     private LocalTime time;
+    private String regNumber;
+
+    public String getRegNumber() {
+        return regNumber;
+    }
+
+    public void setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
+    }
 
     public Long getId() {
         return id;

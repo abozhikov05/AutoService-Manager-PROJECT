@@ -2,16 +2,22 @@ package com.abozhikov.AutoServiceManager.controller;
 
 import com.abozhikov.AutoServiceManager.model.Client;
 import com.abozhikov.AutoServiceManager.repo.ClientRepo;
+import com.abozhikov.AutoServiceManager.repo.ServiceRequestRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 public class AuthController {
 
     private final ClientRepo clientRepo;
     private final PasswordEncoder passwordEncoder;
+    @Autowired
+    private ServiceRequestRepo serviceRequestRepo;
 
     public AuthController(ClientRepo clientRepo, PasswordEncoder passwordEncoder) {
         this.clientRepo = clientRepo;
@@ -40,8 +46,10 @@ public class AuthController {
         clientRepo.save(client);
         return "redirect:/signIn";
     }
-    @GetMapping("/index")
-    public String indexPage() {
+    @GetMapping({"/", "/index"})
+    public String showIndex(Model model) {
+        List<Object[]> stats = serviceRequestRepo.countServicesByCarBrand();
+        model.addAttribute("stats", stats);
         return "index";
     }
 }
