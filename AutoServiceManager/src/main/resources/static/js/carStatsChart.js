@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         data: {
             labels: labels,
             datasets: [{
-                label: 'Number of visits',
+                label: 'Number of visits by brands',
                 data: counts,
                 borderColor: 'royalblue',
                 backgroundColor: 'rgba(65, 105, 225, 0.2)',
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             animation: {
                 duration: 1800,
                 easing: 'easeInOutQuart',
@@ -35,22 +36,23 @@ document.addEventListener("DOMContentLoaded", function() {
             plugins: {
                 legend: {
                     labels: {
-                        color: 'royalblue',
+                        color: '#royalblue',
                         font: { size: 14, weight: 'bold' }
                     }
                 }
             },
             scales: {
                 x: {
-                    title: { display: true, text: 'Brand', color: '#1e3a8a', font: { size: 14 } },
+                    title: { display: true, text: 'Brand', color: '#royalblue', font: { size: 14 } },
                     ticks: { color: '#royalblue' }
                 },
                 y: {
                     beginAtZero: true,
-                    title: { display: true, text: 'Number of visits', color: '#1e3a8a', font: { size: 14 } },
-                    ticks: { color: '#royalblue' }
+                    title: { display: true, text: 'Number of visits', color: '#royalblue', font: { size: 14 } },
+                    ticks: { color: 'royalblue' }
                 }
             }
         }
+
     });
 });

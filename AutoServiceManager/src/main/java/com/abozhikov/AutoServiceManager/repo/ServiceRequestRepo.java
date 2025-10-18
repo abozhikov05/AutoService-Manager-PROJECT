@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Repository
 public interface ServiceRequestRepo extends JpaRepository<ServiceRequest, Long> {
-    Optional<ServiceRequest> findByClientName(String clientName);
-    @Query("SELECT s.carBrand, COUNT(s) FROM ServiceRequest s GROUP BY s.carBrand ORDER BY COUNT(s) DESC")
+   @Query("SELECT s.carBrand, COUNT(s) FROM ServiceRequest s GROUP BY s.carBrand ORDER BY COUNT(s) DESC")
     List<Object[]> countServicesByCarBrand();
+
 }

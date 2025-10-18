@@ -9,7 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class AuthController {
@@ -47,7 +49,12 @@ public class AuthController {
         return "redirect:/signIn";
     }
     @GetMapping({"/", "/index"})
-    public String showIndex(Model model) {
+    public String showIndex(Model model, Principal principal) {
+        if (principal != null) {
+            String email = principal.getName();
+            clientRepo.findByEmail(email).ifPresent(client -> model.addAttribute("firstName", client.getFirstName()));
+        }
+
         List<Object[]> stats = serviceRequestRepo.countServicesByCarBrand();
         model.addAttribute("stats", stats);
         return "index";
