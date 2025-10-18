@@ -35,7 +35,7 @@
         </ul>
     </div>
     <div class="table-header">
-    <h2 class="tableText">Най-често срещани марки коли в сервиза</h2>
+    <h2 class="tableText">Most common car brands in the service station</h2>
 
     <div class="brand-table">
         <canvas id="carChart"></canvas>
@@ -44,41 +44,9 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <script th:inline="javascript">
-            const stats = [[${stats}]];
-            const labels = [];
-            const counts = [];
-
-            for (let i = 0; i < stats.length; i++) {
-                labels.push(stats[i][0]);
-                counts.push(stats[i][1]);
-            }
-
-            new Chart(document.getElementById('carChart'), {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'Number of visits',
-                        data: counts,
-                        borderColor: 'royalblue',
-                        backgroundColor: 'rgba(65, 105, 225, 0.2)',
-                        tension: 0.3,
-                        fill: true,
-                        pointBackgroundColor: 'royalblue',
-                        pointRadius: 5,
-                        pointHoverRadius: 7
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: { beginAtZero: true },
-                        x: { title: { display: true, text: 'Brand' } },
-                        y: { title: { display: true, text: 'Number of visits' } }
-                    }
-                }
-            });
+            window.chartData = [[${stats}]];
         </script>
+        <script th:src="@{/js/carStatsChart.js}"></script>
     </div>
 </div>
 </body>

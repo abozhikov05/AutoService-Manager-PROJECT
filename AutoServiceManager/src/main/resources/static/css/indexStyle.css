@@ -121,3 +121,26 @@ body, html {
     border-radius:15px;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
+
+.chart-title {
+    text-align: center;
+    margin-top: 30px;
+    color: royalblue;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.chart-container {
+    width: 70%;
+    margin: 30px auto;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(65, 105, 225, 0.3);
+}
