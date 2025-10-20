@@ -1,7 +1,8 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Cursive, sans-serif;
+    font-style: inherit;
 }
 
 .bg {
@@ -73,6 +74,116 @@ body, html {
     flex: 1;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 2rem;
+}
+
+.signUp-card {
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+.signUp-card h1{
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.signUp-card:hover{
+    transform: translateY(-3px);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+    border-color: transparent;
+    gap: 10px;
+    padding: 5px 10px;
+}
+
+.input-container .icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+button {
+    background: linear-gradient(90deg, #2563eb, #1e3a8a);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .appointment-card {
+        max-width: 90%;
+    }
+}
+
+.icon1{
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+.signUp-card h2{
+    font-family: Cursive, sans-serif;
+    font-style: inherit;
+}
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.signInLink{
+    font-family: Cursive, sans-serif;
+    font-style: inherit;
+    text-align: center;
+    color: royalblue;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
