@@ -1,13 +1,15 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Cursive, sans-serif;
+    font-style: inherit;
 }
 
 .bg {
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
 }
 
@@ -17,15 +19,18 @@ body, html {
 }
 
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 220px;
-    min-width: 180px;
+    height: 100vh;
     background-color: royalblue;
     color: white;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    align-items: flex-start;
     box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    z-index: 1000;
 }
 
 .sidebar h2 {
@@ -74,30 +79,137 @@ body, html {
     background-color: skyblue;
 }
 
-.content {
-    flex: 1;
+.hero {
+    height: 60vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 2rem;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
 }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.name {
+    color: rgb(31, 50, 114);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 330px;
+    height: 300px;
+}
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-box-front {
+    background-color: transparent;
+    color: black;
+}
+.flip-box-back {
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.flip-box-front {
+    width: 330px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.flip-box-image{
+    width: 310px;
+    height: 280px;
+}
+
 @media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .chart-container {
+        width: 95%;
+        padding: 10px;
+    }
+    .table-header {
+        margin-left: 0;
+    }
+
     .layout {
         flex-direction: column;
     }
 
-    .sidebar {
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
     .content {
+        margin-left: 0;
         padding: 1rem;
     }
 
     .brand-table {
         max-width: 90%;
+    }
+    .hero {
+        height: 50vh;
+        border-radius: 0;
+    }
+    .hero h1 { font-size: 1.8rem; }
+    .hero p { font-size: 1rem; }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -105,27 +217,23 @@ body, html {
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 1;
+    margin-left: 250px;
 }
 
-.tableText{
-    font-family: Cursive, sans-serif;
-    font-style: inherit;
-    text-align:center;
-    margin-top:30px;
-}
-.brand-table{
-    width:90%;
-    margin: 0 auto;
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+.brand-table {
+    width: clamp(300px, 80%, 700px);
+    margin: 2rem auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 .chart-container {
     position: relative;
-    width: 90%;
-    max-width: 800px;
-    height: 400px;
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
     margin: 40px auto;
     background-color: whitesmoke;
     border-radius: 20px;
@@ -137,17 +245,10 @@ canvas {
     width: 100% !important;
     height: 100% !important;
 }
-
-@media (max-width: 768px) {
-    .chart-container {
-        width: 95%;
-        padding: 10px;
+@media (min-width: 1600px) {
+    .brand-table {
+        transform: scale(0.9);
     }
-}
-
-.table-header{
-    font-family: Cursive, sans-serif;
-    font-style: inherit;
 }
 .header-icon{
     width: 35px;
@@ -155,3 +256,15 @@ canvas {
     flex-shrink: 0;
     display: inline-block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
